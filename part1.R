@@ -40,6 +40,7 @@ si.rec99<-srswor(70,554)
 ech.si <- svydesign(id=~CODE_N, weights=rep(554/70,70),fpc = rep(554, 70),
                     data=rec99[which(si.rec99==1),])
 est<- svytotal(~LOGVAC, ech.si)
+est
 attributes(est)
 SE(est)^2
 SE(est)
